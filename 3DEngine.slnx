@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="3DEngine/3DEngine.vcxproj" Id="1fb319dd-b163-4dca-aece-bb9f78c9b18b" />
+</Solution>
