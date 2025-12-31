@@ -6,13 +6,13 @@
 
 int main()
 {
-    //Time
+	//Time for spawning cubes
     sf::Clock clock;
-    //DeltaTime clock
+	//DeltaTime clock for FPS calculation
     sf::Clock dtClock;
     const sf::Time interval = sf::seconds(0.1f);
     srand(time(0));
-    //Intialize
+	//Intializing cube manager
     Cube cube; 
     sf::RenderWindow window(sf::VideoMode({ 1920,1080 }), "");
     window.setFramerateLimit(60);
@@ -28,7 +28,7 @@ int main()
             cube.Spawn();
         }
         window.clear(sf::Color::Black);
-        //Rysuj wszystkie cuby
+		//Drawing and translating all cubes
         for (size_t i = 0; i < cube.cubes.size(); i++) { 
             cube.cubes[i].TranslateZ();
             cube.cubes[i].Draw(window);
