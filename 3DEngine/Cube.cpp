@@ -1,4 +1,4 @@
-#include "Cube.h"
+﻿#include "Cube.h"
 #include "Project.h"
 #include "Screen.h"
 #include <math.h>
@@ -27,6 +27,9 @@ void Cube::Position(sf::Vector3f cords, float volume, float rotation, float spee
 				if (rotation > 0) {
 					//Converting rotation from degrees to radians with formula
 					float rad = rotation / 180 * 3.141;
+					//Vector rotation equation
+					//x' = x*cos(θ) - z*sin(θ)
+					//z' = x*sin(θ) + z*cos(θ)
 					newX = half * i * cos(rad) - half * k * sin(rad) + center.x;
 					newZ = half * i * sin(rad) + half * k * cos(rad) + center.z;
 				}
